@@ -22,3 +22,5 @@ yarn-error.log*
 
 #Firebase settings
 src/firebase/init.js
+
+#secure map Api key

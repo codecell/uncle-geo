@@ -1,5 +1,5 @@
 # uncle-geo
-Uncle-geo is a mini-chat app  with ability to read and display users' geographical location
+Uncle-geo is a mini-chat app  with ability to read and display users' geographical location on a world map
 
 
 [Click here](https://uncle-geo.firebaseapp.com/) to view the app on firebase.
@@ -14,7 +14,7 @@ The app has two levels of authorization;
 - A normal user can:
     - login to their accounts.
     - view all available users currently logged in on the map
-    - click on the markers of other users to leave a comment other users' wall
+    - click on the location markers of other users to leave a comment on other users' wall
     - view all comments on their own page and see who wrote the messages
     - signout of their account 
 
