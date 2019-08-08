@@ -2,7 +2,7 @@
 Uncle-geo is a mini-chat app  with ability to read and display users' geographical location
 
 
-[Click here](https://uncle-geo.firebaseapp.com/) to view the app firebase.
+[Click here](https://uncle-geo.firebaseapp.com/) to view the app on firebase.
 
 ## Features
 
@@ -19,7 +19,7 @@ The app has two levels of authorization;
     - signout of their account 
 
 ## Technologies
-The application was developed with [VueJs](http://vuejs.org/), and backend services, database and hosting services are all provided by google firebase services[Firebase](https://firebase.google.com/).
+The application was developed with [VueJs](http://vuejs.org/), while backend services, database management(NoSql) and hosting services are all provided by google firebase services [Firebase](https://firebase.google.com/).
 
 
 
