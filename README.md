@@ -19,7 +19,7 @@ The app has two levels of authorization;
     - signout of their account 
 
 ## Technologies
-The application was developed with [VueJs](http://vuejs.org/), while backend services, database management(NoSql) and hosting services are all provided by google firebase services [Firebase](https://firebase.google.com/).
+The application's frontend was developed with [VueJs](http://vuejs.org/), styled with [Materialize](https://materializecss.com) while backend services such as database management(NoSql) and web hosting are all provided by google firebase services [Firebase](https://firebase.google.com/).
 
 
 
