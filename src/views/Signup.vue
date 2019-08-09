@@ -15,7 +15,7 @@
                 <input type="text" name="alias" v-model="alias">
             </div>
             <p v-if="feedback" class="red-text center">{{ feedback }}</p>
-            <p v-if="posFeedback" class="green-text center">{{ posFeedback }}</p>
+            <p v-if="!feedback && posFeedback" class="green-text center">{{ posFeedback }}</p>
 
             <div class="field center">
                 <button class="btn deep-purple">Signup</button>
@@ -29,6 +29,7 @@
 import slugify from 'slugify'
 import db from '@/firebase/init'
 import firebase from 'firebase'
+import functions from 'firebase/functions'
 
 export default {
     name: 'signup',
@@ -51,14 +52,15 @@ export default {
                     lower: true
                 })
 
-                let ref = db.collection('users').doc(this.slug)
-                ref.get().then(doc => {
-                    if (doc.exists) {
+                let validateAlias = firebase.functions().httpsCallable('validateAlias')
+                validateAlias({ slug: this.slug }).then(result => {
+                               
+                    if (!result.data.unique) {
                         this.feedback = 'This alias already exists'
                     } else {
                         firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
                             .then(cred => {
-                                ref.set({
+                                db.collection('users').doc(this.slug).set({
                                     alias: this.alias,
                                     geolocation: null,
                                     user_id: cred.user.uid
