@@ -25,3 +25,4 @@ src/firebase/init.js
 
 #secure map Api key
 public/index.html
+.firestore.rules
